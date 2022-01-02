@@ -6,6 +6,7 @@ script_authors("Masaharu Morimoto","Brad Ringer (Boilerplate & Consulting)")
 
 require "moonloader"
 require "sampfuncs"
+require 'inicfg'
 
 -- inicfg section - to use ini files
 local inicfg = require "inicfg"
@@ -13,11 +14,21 @@ local inicfg = require "inicfg"
 dir = getWorkingDirectory() .. "\\config\\Masaharu's Config\\"
 config = dir .. "AutoHoodPop.ini"
 
+-- check if the config folder and ini file exists, if not, create them and save
 if not doesDirectoryExist(dir) then createDirectory(dir) end
 if not doesFileExist(config) then
-	print("!Config File Does Not Exist! -  Make sure the config folder and file is placed within the moonloader folder.")
-	print("It is recommended to redownload the modification and copy all files over to your moonloader folder.")
-	thisScript():unload()
+	file = io.open(config, "w")
+	file:write(" ")
+	file:close()
+	local directIni = config
+	local mainIni = inicfg.load(inicfg.load({
+		Options = {
+			isScriptEnabled = true,
+			dangerZone = 400,
+		},
+	}, directIni))
+
+	inicfg.save(mainIni, directIni)
 end
 
 local directIni = config
