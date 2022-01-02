@@ -8,15 +8,17 @@ require "moonloader"
 require "sampfuncs"
 require 'inicfg'
 
-local repairNeeded = false
+repairNeeded = false
 
 -- START inicfg section - to use ini files
 local inicfg = require "inicfg"
 
 dir = getWorkingDirectory() .. "\\config\\Masaharu's Config\\"
+dir2 = getWorkingDirectory() .. "\\config\\"
 config = dir .. "AutoHoodPop.ini"
 
 -- check if the config folder and ini file exists, if not, create them and save
+if not doesDirectoryExist(dir2) then createDirectory(dir2) end
 if not doesDirectoryExist(dir) then createDirectory(dir) end
 if not doesFileExist(config) then
 	file = io.open(config, "w")
