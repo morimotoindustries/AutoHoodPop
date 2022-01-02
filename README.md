@@ -40,7 +40,7 @@ Note: README.md is not required for the modification to work.
 Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord if you would like to contribute to this project. Pull requests are also welcome however, cannot be guaranteed to be added to the official project.
 
 ### Bugs, Errors, Bounties
-Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord or on the HZRP forums if you encounter any bugs or errors. I am more than willing to check it out for you. Please provide screenshots of the console and your game if possible. ***Press ` to open the console***
+Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord or on the HZRP forums if you encounter any bugs or errors. I am more than willing to check it out for you. Please provide screenshots of the console and your game if possible. ***Press "`" to open the console***
 
 If you find a critical bug, ***especially security related***, you will be paid a minimum sum of ***$20,000HZRP*** plus a bonus depending on severity.
 
@@ -48,7 +48,7 @@ If you find a critical bug, ***especially security related***, you will be paid 
 - [Masaharu Morimoto](https://litelink.at/masaharu)
 
 ## Special Thanks
-- [Brad Ringer (Consulting & Boilerplate)](https://forums.hzgaming.net/member.php/34885-Brad-Ringer)
+- [Brad Ringer (Consulting & Boilerplate Only - No Script Use/Design/Legal Responsibility or Involement)](https://forums.hzgaming.net/member.php/34885-Brad-Ringer)
 - Valeria (inicfg)
 
 ## License

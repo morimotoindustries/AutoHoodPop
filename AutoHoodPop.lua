@@ -2,13 +2,15 @@ script_name("AutoHoodPop")
 script_description("Automatically pops the hood when car health is low.")
 script_version_number("1")
 script_version("1.2.0")
-script_authors("Masaharu Morimoto","Brad Ringer (Boilerplate & Consulting - No Script Use Responsibility)")
+script_authors("Masaharu Morimoto (Official Author)","Brad Ringer (Boilerplate & Consulting Only - No Script Use/Design/Legal Responsibility or Involement)")
 
 require "moonloader"
 require "sampfuncs"
 require 'inicfg'
 
--- inicfg section - to use ini files
+local repairNeeded = false
+
+-- START inicfg section - to use ini files
 local inicfg = require "inicfg"
 
 dir = getWorkingDirectory() .. "\\config\\Masaharu's Config\\"
@@ -34,9 +36,7 @@ end
 local directIni = config
 local mainIni = inicfg.load(nil, directIni)
 inicfg.save(mainIni, directIni)
--- end inicfg section
-
-local repairNeeded = false
+-- END inicfg section
 
 function main()
 	while not isSampAvailable() do wait(100) end -- wait until samp is available and register commands
