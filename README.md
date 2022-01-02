@@ -1,4 +1,5 @@
 # AutoHoodPop
+!(https://img.shields.io/badge/lua-moonloader-red.png)
 
 AutoHoodPop is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health.
 
