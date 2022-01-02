@@ -21,15 +21,15 @@ config
 Note: README.md is not required for the modification to work.
 
 ## Usage
-**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using [/ahp]. You can set the health to pop the hood by using [/ahphealth].
-
-- Acceptable Health Range - 250 - 999
+**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using [/ahp]. You can set the health to pop the hood by using [/ahphealth]. All settings are saved to a configuration file to remember your choices next login.
 
 ```
 /ahp - Enable/Disable | AutoHoodPop |
 /ahphelp - Show the help menu.
 /ahphealth - Set health hood will open at. E.g. [/ahphealth 350]
 ```
+
+- [/ahphealth] Acceptable Health Range - 250 - 999
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
