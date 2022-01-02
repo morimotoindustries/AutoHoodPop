@@ -6,7 +6,6 @@ script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boile
 
 require "moonloader"
 require "sampfuncs"
-require 'inicfg'
 
 repairNeeded = false
 
