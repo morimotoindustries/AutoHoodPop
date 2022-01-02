@@ -5,7 +5,7 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 ![Requires: sampfuncs](https://img.shields.io/badge/requires-sampfuncs%20|%20moonloader%20|%20inicfg-yellow)
 
-**| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health. The health "danger zone" can be changed and saved by the user.
+**| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health. The health "danger zone" is defaulted at 400 and can be changed and saved permanently by the user.
 
 ## Requirements
 - inicfg
@@ -42,7 +42,7 @@ Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Di
 ### Bugs, Errors, Bounties
 Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord or on the HZRP forums if you encounter any bugs or errors. I am more than willing to check it out for you. Please provide screenshots of the console and your game if possible. ***Press ` to open the console***
 
-If you find a critical bug, ***especially security related***, you will be paid a minimum sum of $20,000HZRP plus a bonus depending on severity.
+If you find a critical bug, ***especially security related***, you will be paid a minimum sum of ***$20,000HZRP*** plus a bonus depending on severity.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
