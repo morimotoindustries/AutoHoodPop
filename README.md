@@ -48,7 +48,7 @@ If you find a critical bug, ***especially security related***, you will be paid 
 - [Masaharu Morimoto](https://litelink.at/masaharu)
 
 ### Special Thanks
-- [Brad Ringer](https://forums.hzgaming.net/member.php/34885-Brad-Ringer) -  (Consulting & Boilerplate Only - No Script Use/Design/Implementation/Legal Responsibility or Involvement)
+- [Brad Ringer](https://forums.hzgaming.net/member.php/34885-Brad-Ringer) - Consulting & Boilerplate Only - No Script Use/Design/Implementation/Legal Responsibility or Involvement
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
