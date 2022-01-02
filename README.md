@@ -39,6 +39,9 @@ Note: README.md is not required for the modification to work.
 ## Contributing
 Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord if you would like to contribute to this project. Pull requests are also welcome however, cannot be guaranteed to be added to the official project.
 
+### Bugs & Errors
+Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord or on the HZRP forums if you encounter any bugs or errors. I am more than willing to check it out for you. Please provide screenshots of the console and your game if possible. ***Press ` to open the console***
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
