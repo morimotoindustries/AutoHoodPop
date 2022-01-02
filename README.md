@@ -21,6 +21,9 @@ config
 Note: README.md is not required for the modification to work.
 
 ## Usage
+**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using [/ahp]. You can set the health to pop the hood by using [/ahphealth].
+
+- Acceptable Health Range - 250 - 999
 
 ```
 /ahp - Enable/Disable | AutoHoodPop |
