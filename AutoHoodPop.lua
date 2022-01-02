@@ -49,20 +49,20 @@ function main()
 	sampRegisterChatCommand("ahpmini", cmdMiniHelp)
 	sampRegisterChatCommand("ahphealth", cmdHealthChange)
 	while true do -- begin main loop
-	wait(0)
-  if isCharInAnyCar(PLAYER_PED) and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car and script is enabled
-		local carHandle = storeCarCharIsInNoSave(PLAYER_PED)
-		local carDriver = getDriverOfCar(carHandle)
-    local carHealth = getCarHealth(carHandle)
-		if carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 then
-			sampSendChat("/car hood")
-			sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {22FF22}Hood Popped!", 0xFFC100)
-			repairNeeded = true
-		elseif carHealth >= mainIni.Options.dangerZone and repairNeeded and carDriver == 1 then -- used to reset the "state" of the AutoHoodPop
-			repairNeeded = false
+		wait(0)
+	  if isCharInAnyCar(PLAYER_PED) and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car and script is enabled
+			local carHandle = storeCarCharIsInNoSave(PLAYER_PED)
+			local carDriver = getDriverOfCar(carHandle)
+	    local carHealth = getCarHealth(carHandle)
+			if carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 then
+				sampSendChat("/car hood")
+				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {22FF22}Hood Popped!", 0xFFC100)
+				repairNeeded = true
+			elseif carHealth >= mainIni.Options.dangerZone and repairNeeded and carDriver == 1 then -- used to reset the "state" of the AutoHoodPop
+				repairNeeded = false
+			end
 		end
 	end
-end
 end
 
 function cmdScriptToggle()
@@ -114,7 +114,7 @@ function cmdHelp()
 end
 
 function cmdMiniHelp()
-	sampAddChatMessage("{FFFFFF}|-----------{EC5800} | AutoHoodPop | {FF3333}Danger Zone <= {FFFFFF}" .. mainIni.Options.dangerZone .. " HP {FFFFFF}-----------|", 0xFFC100)
+	sampAddChatMessage("{FFFFFF}|-------------{EC5800} | AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone <= {FFFFFF}" .. mainIni.Options.dangerZone .. " HP {FFFFFF}-------------|", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahp {FFFFFF}- Enable/Disable {EC5800}| AutoHoodPop |", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahphelp {FFFFFF}- Show the help menu.", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahpmini {FFFFFF}- Show the mini help menu.", 0xFFC100)
