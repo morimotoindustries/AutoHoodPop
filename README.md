@@ -36,7 +36,7 @@ Note: README.md is not required for the modification to work.
 - [/ahphealth] Acceptable Health Range - 250 - 999
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord if you would like to contribute to this project. Pull requests are also welcome however, cannot be guaranteed to be added to the official project.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
