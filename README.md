@@ -19,7 +19,7 @@
   - ***Note: Don't wanna do this? Fine! - Use*** **[/ahpmini]**
 
 ## Installation
-Download AutoHoodPop.lua from the [Latest Release Page](https://github.com/morimotoindustries/AutoHoodPop/releases/tag/v1.2.0) and copy to the "moonloader" folder located in your GTA:SA Install Folder. The first time you launch GTA:SA a configuration directory and file will be created for the modification.
+Download AutoHoodPop.lua from the [Latest Releases Page](https://github.com/morimotoindustries/AutoHoodPop/releases/) and copy to the "moonloader" folder located in your GTA:SA Install Folder. The first time you launch GTA:SA a configuration directory and file will be created for the modification.
 
 ### Modification File & Folder Structure
 ```
