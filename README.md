@@ -23,10 +23,11 @@ Download [AutoHoodPop.lua](https://github.com/morimotoindustries/AutoHoodPop/rel
 
 ### Modification File & Folder Structure
 ```
-AutoHoodPop.lua
-config
-    -Masaharu's Config
-        --AutoHoodPop.ini
+moonloader
+  -AutoHoodPop.lua
+  -config
+      --Masaharu's Config
+          ---AutoHoodPop.ini
 ```
 
 ***Note: README.md is not required for the modification to work.***
