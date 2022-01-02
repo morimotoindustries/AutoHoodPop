@@ -114,7 +114,7 @@ function cmdHelp()
 end
 
 function cmdMiniHelp()
-	sampAddChatMessage("{FFFFFF}|-----------{EC5800} | AutoHoodPop | {FF3333}Danger Zone <= {FFFFFF}" .. mainIni.Options.dangerZone .. " HP" {FFFFFF}-----------|", 0xFFC100)
+	sampAddChatMessage("{FFFFFF}|-----------{EC5800} | AutoHoodPop | {FF3333}Danger Zone <= {FFFFFF}" .. mainIni.Options.dangerZone .. " HP {FFFFFF}-----------|", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahp {FFFFFF}- Enable/Disable {EC5800}| AutoHoodPop |", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahphelp {FFFFFF}- Show the help menu.", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahpmini {FFFFFF}- Show the mini help menu.", 0xFFC100)
