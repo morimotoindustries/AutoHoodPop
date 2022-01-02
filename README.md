@@ -49,7 +49,7 @@ Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Di
 ### Bugs, Errors, Bounties
 Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord or on the HZRP forums if you encounter any bugs or errors. I am more than willing to check it out for you. Please provide screenshots of the console and your game with chat visible if possible. ***Press "`" to open the console***
 
-If you find a critical bug, ***especially security related***, you will be paid a minimum sum of ***$20,000HZRP*** plus a bonus depending on severity.
+If you find a critical bug, ***especially security related***, you will be paid a **minimum** sum of ***$20,000HZRP*** plus a bonus depending on severity.
 
 ## Author
 - [Masaharu Morimoto](https://litelink.at/masaharu)
