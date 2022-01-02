@@ -8,6 +8,7 @@
 **| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health. The health "danger zone" can be changed and saved by the user.
 
 ## Requirements
+- inicfg
 - Moonloader
 - Sampfuncs
 
