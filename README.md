@@ -25,7 +25,7 @@ config
         --AutoHoodPop.ini
 ```
 
-Note: README.md and INSTALLATION.txt not required for the modification to work.
+Note: README.md and INSTALLATION.txt are not required for the modification to work.
 
 ## Usage
 **| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using **[/ahp]**. You can set the health to pop the hood by using **[/ahphealth]**. All settings are permanently saved to a configuration file.
