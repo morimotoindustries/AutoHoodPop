@@ -34,7 +34,7 @@ Note: README.md is not required for the modification to work.
 /ahphealth - Set health hood will open at. E.g. [/ahphealth 350]
 ```
 
-- [/ahphealth] Acceptable Health Range - 250 - 999
+- [/ahphealth] Allowed Health Range - 250 HP -> 999 HP
 
 ## Contributing
 Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord if you would like to contribute to this project. Pull requests are also welcome however, cannot be guaranteed to be added to the official project.
@@ -44,12 +44,12 @@ Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Di
 
 If you find a critical bug, ***especially security related***, you will be paid a minimum sum of ***$20,000HZRP*** plus a bonus depending on severity.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
 ## Author
 - [Masaharu Morimoto](https://litelink.at/masaharu)
 
 ## Special Thanks
 - [Brad Ringer (Consulting & Boilerplate)](https://forums.hzgaming.net/member.php/34885-Brad-Ringer)
 - Valeria (inicfg)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
