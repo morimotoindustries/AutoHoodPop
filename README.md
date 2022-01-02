@@ -1,4 +1,4 @@
-# | AutoHoodPop |
+# | AutoHoodPop | v.1.2.0 (Initial Release)
 ![Released January 2022](https://img.shields.io/badge/release%20date-January%202022-purple)
 ![1.2.0](https://raster.shields.io/badge/version-v1.2.0-blue)
 ![moonloader](https://img.shields.io/badge/lua-moonloader-orange)
