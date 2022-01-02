@@ -11,7 +11,7 @@
 - inicfg
 - Moonloader
 - Sampfuncs
-- /pagesize 13 or higher for display of the [/ahphelp] menu
+- **[/pagesize 13]** or higher for display of the **[/ahphelp]** menu
 
 ## Installation
 Extract AutoHoodPop.lua from the zip file to the "moonloader" folder located in your GTA:SA Install Folder. The first time you launch GTA:SA a configuration directory and file will be created for the modification.
@@ -27,7 +27,7 @@ config
 Note: README.md is not required for the modification to work.
 
 ## Usage
-**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using [/ahp]. You can set the health to pop the hood by using [/ahphealth]. All settings are permanently saved to a configuration file.
+**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using **[/ahp]**. You can set the health to pop the hood by using **[/ahphealth]**. All settings are permanently saved to a configuration file.
 
 ```
 /ahp - Enable/Disable | AutoHoodPop |
@@ -35,7 +35,7 @@ Note: README.md is not required for the modification to work.
 /ahphealth - Set health hood will open at. E.g. [/ahphealth 350]
 ```
 
-- [/ahphealth] Allowed Health Range - 250 HP -> 999 HP
+- **[/ahphealth]** - Allowed Health Range - 250 HP -> 999 HP
 
 ## Contributing
 Please contact [Masaharu Morimoto#2302](https://litelink.at/masaharu) through Discord if you would like to contribute to this project. Pull requests are also welcome however, cannot be guaranteed to be added to the official project.
