@@ -27,8 +27,8 @@ config
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-## License
-![MIT License](https://img.shields.io/badge/license-MIT-green.png)
+## License ![MIT License](https://img.shields.io/badge/license-MIT-green.png)
+
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
