@@ -5,7 +5,7 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 ![Requires: sampfuncs](https://img.shields.io/badge/requires-sampfuncs%20|%20moonloader%20|%20inicfg-yellow)
 
-**| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health. The health "***danger zone***" is defaulted at 400 and can be changed and saved permanently by the user.
+**| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health. The health "***danger zone***" is defaulted to 400 on first launch and can be changed and saved permanently by the user.
 
 ## Requirements
 - inicfg
@@ -13,7 +13,7 @@
 - Sampfuncs
 
 ## Installation
-Extract AutoHoodPop.lua from the zip file to the "moonloader" folder located in your GTA:SA Install Folder. The first time you run GTA:SA with this installed a configuration directory and file will be created.
+Extract AutoHoodPop.lua from the zip file to the "moonloader" folder located in your GTA:SA Install Folder. The first time you launch GTA:SA with this installed a configuration directory and file will be created.
 
 ### Modification File & Folder Structure
 ```
@@ -26,7 +26,7 @@ config
 Note: README.md is not required for the modification to work.
 
 ## Usage
-**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using [/ahp]. You can set the health to pop the hood by using [/ahphealth]. All settings are saved to a configuration file to remember your choices on next login.
+**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using [/ahp]. You can set the health to pop the hood by using [/ahphealth]. All settings are permanently saved to a configuration file.
 
 ```
 /ahp - Enable/Disable | AutoHoodPop |
