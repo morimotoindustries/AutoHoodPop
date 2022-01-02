@@ -38,10 +38,8 @@ Note: README.md is not required for the modification to work.
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
 
 ## Author
 - [Masaharu Morimoto](https://litelink.at/masaharu)
