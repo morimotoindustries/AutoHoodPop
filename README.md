@@ -16,7 +16,7 @@
 - Moonloader
 - Sampfuncs
 - **[/pagesize 14]** or higher for display of the **[/ahphelp]** menu
-  - Note: Don't wanna do this? Fine! - Use **[/ahpmini]**
+  - ***Note: Don't wanna do this? Fine! - Use **[/ahpmini]*****
 
 ## Installation
 Extract AutoHoodPop.lua from the zip file to the "moonloader" folder located in your GTA:SA Install Folder. The first time you launch GTA:SA a configuration directory and file will be created for the modification.
