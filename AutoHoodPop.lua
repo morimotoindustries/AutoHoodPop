@@ -2,7 +2,7 @@ script_name("AutoHoodPop")
 script_description("Automatically pops the hood when car health is low.")
 script_version_number("1")
 script_version("1.2.0")
-script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting Only - No Script Use/Design/Implementation/Legal Responsibility or Involement)")
+script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting Only - No Script Use/Design/Implementation/Legal Responsibility or Involvement)")
 
 require "moonloader"
 require "sampfuncs"
