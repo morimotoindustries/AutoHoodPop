@@ -1,5 +1,5 @@
 # AutoHoodPop
-![1.2.0](https://raster.shields.io/badge/version-v1.2.0-blue.png) ![moonloader](https://img.shields.io/badge/lua-moonloader-red.png)
+![1.2.0](https://raster.shields.io/badge/version-v1.2.0-blue.png) ![Released January 2022](https://img.shields.io/badge/release%20date-January%202022-purple) ![moonloader](https://img.shields.io/badge/lua-moonloader-red.png) ![MIT License](https://img.shields.io/badge/license-MIT-green.png)
 
 AutoHoodPop is a GTA:SA Moonloader modification that automatically opens your car hood at a specified health.
 
@@ -27,8 +27,7 @@ config
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-## License ![MIT License](https://img.shields.io/badge/license-MIT-green.png)
-
+## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
