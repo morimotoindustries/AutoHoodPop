@@ -1,7 +1,7 @@
 script_name("AutoHoodPop")
 script_description("Automatically pops the hood when car health is low.")
 script_version_number("1")
-script_version("1.2.0")
+script_version("1.2.1")
 script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting Only - No Script Use/Design/Implementation/Legal Responsibility or Involvement)")
 
 require "moonloader"
@@ -49,7 +49,7 @@ function main()
 	sampRegisterChatCommand("ahphealth", cmdHealthChange)
 	while true do -- begin main loop
 		wait(0)
-	  if isCharInAnyCar(PLAYER_PED) and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car and script is enabled
+	  if isCharInAnyCar(PLAYER_PED) or isCharInAnyBoat(PLAYER_PED) or isCharInAnyHeli(PLAYER_PED) and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car and script is enabled
 			local carHandle = storeCarCharIsInNoSave(PLAYER_PED)
 			local carDriver = getDriverOfCar(carHandle)
 	    local carHealth = getCarHealth(carHandle)
