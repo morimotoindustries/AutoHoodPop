@@ -59,10 +59,10 @@ function main()
 				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {22FF22}Hood Popped!", 0xFFC100)
 				repairNeeded = true
 			elseif carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharOnAnyBike(PLAYER_PED) then -- I am on a bike, /car hood not required
-				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {FF3333}Repair Needed!", 0xFFC100)
+				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {22FF22}Repair Needed!", 0xFFC100)
 				repairNeeded = true
 			elseif carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharInFlyingVehicle(PLAYER_PED) then -- I am in any flying vehicle, /car hood not required
-				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {FF3333}Repair Needed!", 0xFFC100)
+				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {22FF22}Repair Needed!", 0xFFC100)
 				repairNeeded = true
 			elseif carHealth >= mainIni.Options.dangerZone and repairNeeded and carDriver == 1 then -- used to reset the "state" of the AutoHoodPop
 				repairNeeded = false
