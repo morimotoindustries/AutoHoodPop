@@ -2,7 +2,7 @@ script_name("AutoHoodPop")
 script_description("Automatically pops the hood when car health is low.")
 script_version_number("1")
 script_version("1.2.2")
-script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting Only)")
+script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting)")
 
 require "moonloader"
 require "sampfuncs"
@@ -17,7 +17,7 @@ dir = getWorkingDirectory() .. "\\config\\Masaharu's Config\\"
 dir2 = getWorkingDirectory() .. "\\config\\"
 config = dir .. "AutoHoodPop.ini"
 
--- check if the config folder and ini file exists, if not, create them and save
+-- check if the config folder and ini file exists, if not, create them, enter default settings, and save
 if not doesDirectoryExist(dir2) then createDirectory(dir2) end
 if not doesDirectoryExist(dir) then createDirectory(dir) end
 if not doesFileExist(config) then
@@ -51,8 +51,8 @@ function main()
 	while true do -- begin main loop
 		wait(0)
 	  if carCheck() and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car, boat, or heli and script is enabled
-			local carHandle = storeCarCharIsInNoSave(PLAYER_PED)
-			local carDriver = getDriverOfCar(carHandle)
+			local carHandle = storeCarCharIsInNoSave(PLAYER_PED) -- these variables are thanks to Brad
+			local carDriver = getDriverOfCar(carHandle) -- these variables are thanks to Brad
 	    local carHealth = getCarHealth(carHandle)
 			if carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and not isCharOnAnyBike(PLAYER_PED) and not isCharInFlyingVehicle(PLAYER_PED) then -- For vehicles that require /car hood (cars & boats)
 				sampSendChat("/car hood")
