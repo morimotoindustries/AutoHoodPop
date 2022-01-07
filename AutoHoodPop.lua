@@ -1,15 +1,16 @@
 script_name("AutoHoodPop")
 script_description("Automatically pops the hood when car health is low.")
 script_version_number("1")
-script_version("1.2.1")
-script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting Only - No Script Use/Design/Implementation/Legal Responsibility or Involvement)")
+script_version("1.2.2")
+script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting Only)")
 
 require "moonloader"
 require "sampfuncs"
 
+-- car needs repair - default to false
 repairNeeded = false
 
--- START inicfg section - to use ini files
+-- ****START**** inicfg section - to use ini files
 local inicfg = require "inicfg"
 
 dir = getWorkingDirectory() .. "\\config\\Masaharu's Config\\"
@@ -37,30 +38,44 @@ end
 local directIni = config
 local mainIni = inicfg.load(nil, directIni)
 inicfg.save(mainIni, directIni)
--- END inicfg section
+-- ****END**** inicfg section
 
 function main()
 	while not isSampAvailable() do wait(100) end -- wait until samp is available and register commands
 	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}Author: {4285F4}Masaharu Morimoto | {FFFFFF}[{FFC100}/ahphelp{FFFFFF}]", 0xFFC100)
 	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Set to <= {FFFFFF}" .. mainIni.Options.dangerZone .. " HP", 0xFFC100)
-	sampRegisterChatCommand("ahp", cmdScriptToggle)
-	sampRegisterChatCommand("ahphelp", cmdHelp)
-	sampRegisterChatCommand("ahpmini", cmdMiniHelp)
-	sampRegisterChatCommand("ahphealth", cmdHealthChange)
+	sampRegisterChatCommand("ahp", cmdScriptToggle) -- toggles the script
+	sampRegisterChatCommand("ahphelp", cmdHelp) -- full version of the help commmand. Requires /pagesize 14+
+	sampRegisterChatCommand("ahpmini", cmdMiniHelp) -- mini version of the help command for people with small /pagesize
+	sampRegisterChatCommand("ahphealth", cmdHealthChange) -- set the health you want the hood to pop at / notification to be announced
 	while true do -- begin main loop
 		wait(0)
-	  if isCharInAnyCar(PLAYER_PED) or isCharInAnyBoat(PLAYER_PED) or isCharInAnyHeli(PLAYER_PED) and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car and script is enabled
+	  if carCheck() and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car, boat, or heli and script is enabled
 			local carHandle = storeCarCharIsInNoSave(PLAYER_PED)
 			local carDriver = getDriverOfCar(carHandle)
 	    local carHealth = getCarHealth(carHandle)
-			if carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 then
+			if carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and not isCharOnAnyBike(PLAYER_PED) and not isCharInFlyingVehicle(PLAYER_PED) then -- For vehicles that require /car hood (cars & boats)
 				sampSendChat("/car hood")
 				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {22FF22}Hood Popped!", 0xFFC100)
+				repairNeeded = true
+			elseif carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharOnAnyBike(PLAYER_PED) then -- I am on a bike, /car hood not required
+				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {FF3333}Repair Needed!", 0xFFC100)
+				repairNeeded = true
+			elseif carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharInFlyingVehicle(PLAYER_PED) then -- I am in any flying vehicle, /car hood not required
+				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {FF3333}Repair Needed!", 0xFFC100)
 				repairNeeded = true
 			elseif carHealth >= mainIni.Options.dangerZone and repairNeeded and carDriver == 1 then -- used to reset the "state" of the AutoHoodPop
 				repairNeeded = false
 			end
 		end
+	end
+end
+
+function carCheck() -- need to check if we are in any type of car before running through loop
+	if isCharInAnyCar(PLAYER_PED) or isCharInAnyBoat(PLAYER_PED) or isCharInAnyHeli(PLAYER_PED) or isCharInAnyPlane(PLAYER_PED) or isCharOnAnyBike(PLAYER_PED) or isCharInFlyingVehicle(PLAYER_PED) then
+		return true
+	else -- we aint in a car
+		return false
 	end
 end
 

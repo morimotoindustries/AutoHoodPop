@@ -9,7 +9,7 @@
 <img src="https://imgur.com/WVNjRmT.png">
 </p>
 
-**| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified HP. The health "***danger zone***" is defaulted to 400 on first launch and can be changed and saved permanently by the user.
+**| AutoHoodPop |** is a GTA:SA Moonloader modification that automatically opens your car hood at a specified HP. The health "***danger zone***" is defaulted to 400 on first launch and can be changed and saved permanently by the user. The modification works on boats, cars, helicopters, and motorcycles (just a notification).
 
 ## Requirements
 - inicfg
@@ -33,7 +33,7 @@ moonloader
 ***Note: README.md is not required for the modification to work.***
 
 ## Usage
-**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using **[/ahp]**. You can set the health to pop the hood by using **[/ahphealth]**. All settings are permanently saved to a configuration file.
+**| AutoHoodPop |** is automatically enabled when initially installed. It can be disabled using **[/ahp]**. You can set the health to pop the hood by using **[/ahphealth]**. All settings are permanently saved to a configuration file. It handles all types of vehicles. If you are in a vehicle that does not require [/car hood] you will get a notification only.
 
 ```
 /ahp - Enable/Disable | AutoHoodPop |
