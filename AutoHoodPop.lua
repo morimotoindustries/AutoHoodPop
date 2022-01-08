@@ -42,7 +42,7 @@ inicfg.save(mainIni, directIni)
 
 function main()
 	while not isSampAvailable() do wait(100) end -- wait until samp is available and register commands
-	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}Author: {4285F4}Masaharu Morimoto | {FFFFFF}[{FFC100}/ahphelp{FFFFFF}]", 0xFFC100)
+	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}Author: {4285F4}Masaharu Morimoto {FFFFFF}| [{FFC100}/ahphelp{FFFFFF}]", 0xFFC100)
 	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Set to < {FFFFFF}" .. mainIni.Options.dangerZone .. " HP", 0xFFC100)
 	sampRegisterChatCommand("ahp", cmdScriptToggle) -- toggles the script
 	sampRegisterChatCommand("ahphelp", cmdHelp) -- full version of the help commmand. Requires /pagesize 14+
