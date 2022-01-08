@@ -138,6 +138,7 @@ function cmdMiniHelp()
 end
 
 function cmdAbout()
-	local description = "{FFFFFF}From {4285F4}MORIMOTO Industries {FFFFFF}" .. "\n\n" .. "AutoHoodPop is a GTA:SA Moonloader modification that automatically opens your car hood at a specified HP.\nThe health danger zone is defaulted to 400 on first launch and can be changed and saved permanently by the user.\nIt handles all types of vehicles so if you are in a vehicle that does not require [/car hood] you will get a Repair Needed notification only." .. "\n\n" .. "Version Changes:\n- Now handles all types of vehicles\n- Added Repair Needed notification" .. "\n\n" .. "For more information use - {EC5800}[/ahphelp]"
-	sampShowDialog(6969, "{EC5800}| AutoHoodPop | v1.2.3", description, "Close")
+	local description = "{FFFFFF}From {4285F4}MORIMOTO Industries {FFFFFF}" .. "\n\n" .. "AutoHoodPop is a GTA:SA Moonloader modification that automatically opens your car hood at a specified HP.\nThe health danger zone is defaulted to 400 on first launch and can be changed and saved permanently by the user.\nIt handles all types of vehicles so if you are in a vehicle that does not require [/car hood] you will get a Repair Needed notification only." .. "\n\n" .. "Version Changes:\nv1.2.2\n- Now handles all types of vehicles\n- Added Repair Needed notification" .. "\n\n" .. "For more information use - {EC5800}[/ahphelp]"
+	local titleBar = "{EC5800}| AutoHoodPop | v1.2.3"
+	sampShowDialog(6969, titleBar, description, "Close")
 end
