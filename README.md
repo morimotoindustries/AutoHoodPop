@@ -15,7 +15,7 @@
 - inicfg
 - Moonloader
 - Sampfuncs
-- **[/pagesize 14]** or higher for display of the **[/ahphelp]** menu
+- **[/pagesize 15]** or higher for display of the **[/ahphelp]** menu
   - ***Note: Don't wanna do this? Fine! - Use*** **[/ahpmini]**
 
 ## Installation

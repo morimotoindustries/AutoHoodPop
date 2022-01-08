@@ -1,7 +1,7 @@
 script_name("AutoHoodPop")
 script_description("Automatically pops the hood when car health is low.")
 script_version_number("1")
-script_version("1.2.2")
+script_version("1.2.3")
 script_authors("Masaharu Morimoto (Design & Implementation)","Brad Ringer (Boilerplate & Consulting)")
 
 require "moonloader"
@@ -46,11 +46,12 @@ function main()
 	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Set to < {FFFFFF}" .. mainIni.Options.dangerZone .. " HP", 0xFFC100)
 	sampRegisterChatCommand("ahp", cmdScriptToggle) -- toggles the script
 	sampRegisterChatCommand("ahphelp", cmdHelp) -- full version of the help commmand. Requires /pagesize 14+
+	sampRegisterChatCommand("ahpabout", cmdAbout) -- set the health you want the hood to pop at / notification to be announced
 	sampRegisterChatCommand("ahpmini", cmdMiniHelp) -- mini version of the help command for people with small /pagesize
 	sampRegisterChatCommand("ahphealth", cmdHealthChange) -- set the health you want the hood to pop at / notification to be announced
 	while true do -- begin main loop
 		wait(0)
-	  if carCheck() and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car, boat, or heli and script is enabled
+	  if vehCheck() and mainIni.Options.isScriptEnabled then -- check to make sure player is in a car, boat, or heli and script is enabled
 			local carHandle = storeCarCharIsInNoSave(PLAYER_PED) -- these variables are thanks to Brad
 			local carDriver = getDriverOfCar(carHandle) -- these variables are thanks to Brad
 	    local carHealth = getCarHealth(carHandle)
@@ -71,7 +72,7 @@ function main()
 	end
 end
 
-function carCheck() -- need to check if we are in any type of car before running through loop
+function vehCheck() -- need to check if we are in any type of vehicle before running through loop
 	if isCharInAnyCar(PLAYER_PED) or isCharInAnyBoat(PLAYER_PED) or isCharInAnyHeli(PLAYER_PED) or isCharInAnyPlane(PLAYER_PED) or isCharOnAnyBike(PLAYER_PED) or isCharInFlyingVehicle(PLAYER_PED) then
 		return true
 	else -- we aint in a car
@@ -79,7 +80,7 @@ function carCheck() -- need to check if we are in any type of car before running
 	end
 end
 
-function cmdScriptToggle()
+function cmdScriptToggle() -- enable / disable the script
 	if mainIni.Options.isScriptEnabled then
 		mainIni.Options.isScriptEnabled = false
 		sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF2222}Disabled", 0xFFC100)
@@ -91,7 +92,7 @@ function cmdScriptToggle()
 	end
 end
 
-function cmdHealthChange(newDangerZone)
+function cmdHealthChange(newDangerZone) -- function to allow changing and saving of health "danger zone"
 	if newDangerZone == nil or newDangerZone == "" or not isInteger(newDangerZone) then
 		sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone must be an integer and not empty", 0xFFC100)
 	else
@@ -106,7 +107,7 @@ function cmdHealthChange(newDangerZone)
 	end
 end
 
-function isInteger(str)
+function isInteger(str) -- makes sure it's an integer
   return not (str == "" or str:find("%D"))
 end
 
@@ -117,6 +118,7 @@ function cmdHelp()
 	sampAddChatMessage("{EC5800}/ahphelp {FFFFFF}- Show the help menu.", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahpmini {FFFFFF}- Show the mini help menu.", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahphealth {FFFFFF}- Set health hood will open at. E.g. [/ahphealth 350]", 0xFFC100)
+	sampAddChatMessage("{EC5800}/ahpabout {FFFFFF}- Version information.", 0xFFC100)
 	sampAddChatMessage(" ", 0xFFC100)
 	sampAddChatMessage("{FFC100}- Description:", 0xFFC100)
 	sampAddChatMessage("{FFFFFF}This script will automatically type /car hood when vehicle", 0xFFC100)
@@ -133,4 +135,9 @@ function cmdMiniHelp()
 	sampAddChatMessage("{EC5800}/ahphelp {FFFFFF}- Show the help menu.", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahpmini {FFFFFF}- Show the mini help menu.", 0xFFC100)
 	sampAddChatMessage("{EC5800}/ahphealth {FFFFFF}- Set health hood will open at. E.g. [/ahphealth 350]", 0xFFC100)
+end
+
+function cmdAbout()
+	local description = "{FFFFFF}From {4285F4}MORIMOTO Industries {FFFFFF}" .. "\n\n" .. "AutoHoodPop is a GTA:SA Moonloader modification that automatically opens your car hood at a specified HP.\nThe health danger zone is defaulted to 400 on first launch and can be changed and saved permanently by the user.\nIt handles all types of vehicles so if you are in a vehicle that does not require [/car hood] you will get a Repair Needed notification only." .. "\n\n" .. "Version Changes:\n- Now handles all types of vehicles\n- Added Repair Needed notification" .. "\n\n" .. "For more information use - {EC5800}[/ahphelp]"
+	sampShowDialog(6969, "{EC5800}| AutoHoodPop | v1.2.3", description, "Close")
 end
