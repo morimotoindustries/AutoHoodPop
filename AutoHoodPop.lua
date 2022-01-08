@@ -43,7 +43,7 @@ inicfg.save(mainIni, directIni)
 function main()
 	while not isSampAvailable() do wait(100) end -- wait until samp is available and register commands
 	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}Author: {4285F4}Masaharu Morimoto | {FFFFFF}[{FFC100}/ahphelp{FFFFFF}]", 0xFFC100)
-	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Set to <= {FFFFFF}" .. mainIni.Options.dangerZone .. " HP", 0xFFC100)
+	sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Set to < {FFFFFF}" .. mainIni.Options.dangerZone .. " HP", 0xFFC100)
 	sampRegisterChatCommand("ahp", cmdScriptToggle) -- toggles the script
 	sampRegisterChatCommand("ahphelp", cmdHelp) -- full version of the help commmand. Requires /pagesize 14+
 	sampRegisterChatCommand("ahpmini", cmdMiniHelp) -- mini version of the help command for people with small /pagesize
@@ -54,17 +54,17 @@ function main()
 			local carHandle = storeCarCharIsInNoSave(PLAYER_PED) -- these variables are thanks to Brad
 			local carDriver = getDriverOfCar(carHandle) -- these variables are thanks to Brad
 	    local carHealth = getCarHealth(carHandle)
-			if carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and not isCharOnAnyBike(PLAYER_PED) and not isCharInFlyingVehicle(PLAYER_PED) then -- For vehicles that require /car hood (cars & boats)
+			if carHealth < mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and not isCharOnAnyBike(PLAYER_PED) and not isCharInFlyingVehicle(PLAYER_PED) then -- For vehicles that require /car hood (cars & boats)
 				sampSendChat("/car hood")
 				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {22FF22}Hood Popped!", 0xFFC100)
 				repairNeeded = true
-			elseif carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharOnAnyBike(PLAYER_PED) then -- I am on a bike, /car hood not required
+			elseif carHealth < mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharOnAnyBike(PLAYER_PED) then -- I am on a bike, /car hood not required
 				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {22FF22}Repair Needed!", 0xFFC100)
 				repairNeeded = true
-			elseif carHealth <= mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharInFlyingVehicle(PLAYER_PED) then -- I am in any flying vehicle, /car hood not required
+			elseif carHealth < mainIni.Options.dangerZone and not repairNeeded and carDriver == 1 and isCharInFlyingVehicle(PLAYER_PED) then -- I am in any flying vehicle, /car hood not required
 				sampAddChatMessage("{EC5800}| AutoHoodPop | {FFC100}- {22FF22}Repair Needed!", 0xFFC100)
 				repairNeeded = true
-			elseif carHealth >= mainIni.Options.dangerZone and repairNeeded and carDriver == 1 then -- used to reset the "state" of the AutoHoodPop
+			elseif carHealth > mainIni.Options.dangerZone and repairNeeded and carDriver == 1 then -- used to reset the "state" of the AutoHoodPop
 				repairNeeded = false
 			end
 		end
@@ -100,7 +100,7 @@ function cmdHealthChange(newDangerZone)
 			sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone must be between 250 HP and 999 HP", 0xFFC100)
 		else
 			mainIni.Options.dangerZone = newDangerZoneNum
-			sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Changed to <= {FFFFFF}" .. tostring(newDangerZoneNum) .. " HP", 0xFFC100)
+			sampAddChatMessage("{EC5800}| AutoHoodPop | {FFFFFF}- {FF3333}Danger Zone Changed to < {FFFFFF}" .. tostring(newDangerZoneNum) .. " HP", 0xFFC100)
 			inicfg.save(mainIni, directIni)
 		end
 	end
